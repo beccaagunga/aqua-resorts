@@ -18,10 +18,10 @@
 }
 /* globals */
 body {
-  padding-top: 66px;
+  /* padding-top: 66px; */
   color: var(--mainBlack);
   background: var(--mainBlack);
-  font-family: 'Source Serif Pro', Verdana, Tahoma, serif;
+  font-family: 'Playfair Display SC', serif;
   line-height: 1.4;
 }
 h1 {
@@ -97,12 +97,21 @@ h6 {
   left: 0;
   width: 100%;
   padding: 0.75rem 2rem;
-  background: var(--mainBlack);
+  background: transparent;
   z-index: 1;
+}
+
+.nav-center {
+  display: flex;
 }
 .nav-header {
   display: flex;
   justify-content: space-between;
+}
+
+.nav-header img {
+  width: 30px;
+  height: 30px;
 }
 .nav-btn {
   background: transparent;
@@ -119,6 +128,7 @@ h6 {
   overflow: hidden;
   transition: var(--mainTransition);
   list-style-type: none;
+
 }
 .nav-links a {
   display: block;
@@ -130,6 +140,7 @@ h6 {
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: var(--mainSpacing);
+  text-transform: uppercase;
 }
 .nav-links a:hover {
   color: var(--primaryColor);
@@ -144,7 +155,7 @@ h6 {
   }
   .nav-center {
     max-width: 1170px;
-    margin: 0 auto;
+    margin: 0 1rem;
     display: flex;
   }
   .nav-links {
@@ -161,26 +172,27 @@ h6 {
 /* Hero */
 .defaultHero,
 .roomsHero {
-  min-height: calc(100vh - 66px);
-  background: url("./images/defaultBcg.jpeg") center/cover no-repeat;
+  height: 100vh;
+  background: url("./images/bcg2.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .roomsHero {
-  background-image: url("./images/room-2.jpeg");
+  background-image: url("./images/bedroom.jpg");
   min-height: 60vh;
 }
 /* End of Hero */
 /* Banner */
 .banner {
   display: inline-block;
-  background: rgba(0, 0, 0, .8);
+  background: rgba(0, 0, 0, 0.4);
   color: var(--mainWhite);
   padding: 2rem 1rem;
   text-align: center;
   text-transform: capitalize;
   letter-spacing: var(--mainSpacing);
+
 }
 .banner h1 {
   font-size: 2.5rem;
@@ -234,7 +246,7 @@ h6 {
 
 /* services */
 .services {
-  padding: 5rem 0;
+  padding: 4rem 0;
 }
 .services {
   background: var(--darkGrey);
