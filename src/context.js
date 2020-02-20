@@ -65,17 +65,12 @@ componentDidMount() {
     });
   }
 
-
-
-
-
 formatData(items){
   let tempItems = items.map(item => {
   let id = item.sys.id;
   let images = item.fields.images.map(image => image.fields.file.url);
   let room = {...item.fields, images, id}
     return room;
-
   });
   return tempItems;
 }
@@ -143,7 +138,7 @@ if(pets) {
 const RoomConsumer = RoomContext.Consumer;
 
 export function withRoomConsumer(Component) {
-  return function ConumerWrapper(props) {
+  return function ConsumerWrapper(props) {
     return <RoomConsumer>
       {
         value => <Component {...props} context={value} />
